@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Polygon, Polyline } from "@react-google-maps/api";
+import BoundaryPolygon from "./BoundaryPolygon";
 
 const formatToPath = (geojson) => {
   let path = [];
@@ -27,7 +27,7 @@ const BoundsGetter = () => {
     getBounds();
   }, []);
 
-  return <Polygon path={bounds} onClick={() => console.log("click")} />;
+  return <BoundaryPolygon bounds={bounds} />;
 };
 
 export default BoundsGetter;
