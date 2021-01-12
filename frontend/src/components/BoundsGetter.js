@@ -19,7 +19,7 @@ const BoundsGetter = () => {
           "https://nominatim.openstreetmap.org/search.php?q=philadelphia&polygon_geojson=1&format=jsonv2"
         )
         .then((res) => {
-          console.log("RERENDER BOUNDSGETTER");
+          //   console.log("RERENDER BOUNDSGETTER");
           setBounds(formatToPath(res.data[0].geojson.coordinates[0]));
         })
         .catch((err) => console.log(err));
