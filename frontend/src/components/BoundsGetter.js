@@ -11,6 +11,7 @@ const formatToPath = (geojson) => {
 };
 
 const BoundsGetter = () => {
+  // customize this
   const [bounds, setBounds] = useState([]);
   useEffect(() => {
     const getBounds = () => {
